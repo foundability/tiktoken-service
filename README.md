@@ -64,6 +64,22 @@ We use `pytest` for unit testing. To run tests:
    pytest tests/
    ```
 
+## 🐳 Kubernetes Deployment
+
+To deploy the TikToken service in a Kubernetes cluster, follow these steps:
+
+1. Apply the Deployment:
+   ```bash
+   kubectl apply -f k8s/deployment.yaml
+   ```
+
+2. Apply the Service:
+   ```bash
+   kubectl apply -f k8s/service.yaml
+   ```
+
+Once deployed, the service should be accessible through the LoadBalancer's IP or your configured Ingress.
+
 ## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.

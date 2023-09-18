@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tiktoken
+  labels:
+    app: tiktoken
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tiktoken
+  template:
+    metadata:
+      labels:
+        app: tiktoken
+    spec:
+      containers:
+      - name: tiktoken
+        image: your_dockerhub_username/tiktoken-service:latest
+        ports:
+        - containerPort: 5000
